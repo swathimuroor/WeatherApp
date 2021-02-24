@@ -22,17 +22,27 @@ const getWeather = async (place) => {
     }
   };
 
+  // method to get date
+  const getDate = (param) => {
+    let date=String(param.getDate()).padStart(2, '0') +"/"
+            +String(param.getMonth() + 1).padStart(2, '0') +"/"
+            +param.getFullYear();
+    return date;
+  }
   // This method renders card view for the weather.
   const getWeatherCard = data => {
     const imageName = getImages[data.weather[0].icon];
     return `  <div class="card text-center col-md-4" >
-                    <div class="card-header"><b> ${data.name} </b></div>
+                    <div class="card-header">
+                        <b> ${data.name} </b> <br>
+                        ${getDate(new Date())}
+                    </div>
                     <div class="card-body">
                         <img src="icons/${imageName}" height = 150 >
                         <h5 class="card-title">${data.weather[0].description}</h5>
                         <div class="row">
                             <div class="col-md-6 text-start">Minimum : ${data.main.temp_min}&#8451;  </div>
-                            <div class="col-md-6 text-end">Maximun : ${data.main.temp_max}&#8451;</div>
+                            <div class="col-md-6 text-end">Maximum : ${data.main.temp_max}&#8451;</div>
                         </div>
                     </div>
                     <div class="card-footer text-primary "> 
