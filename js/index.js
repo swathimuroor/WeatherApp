@@ -10,10 +10,12 @@ const getWeather = async (place) => {
     try {
       let response = await fetch(apiURL + `q=${place}&appid=${apiKey}&units=metric`);
       let data = await response.json();
-      if(data.cod !== '404'){
-        document.querySelector('#weatherCard').innerHTML =  getWeatherCard(data);
-      }else{
+      if(data.cod == '404'){
         document.querySelector('#weatherCard').innerHTML = `Invalid: City name not found`;
+      }else if(data.cod == '404'){ 
+        document.querySelector('#weatherCard').innerHTML = `Invalid: City name not found`;
+      }else{
+        document.querySelector('#weatherCard').innerHTML =  getWeatherCard(data);
       }
     } catch (err) {
       console.error(`Error: ${err}`);
