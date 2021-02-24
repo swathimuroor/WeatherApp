@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script  src ="./js/index.js" defer></script>
+    <title>⚡Track My Weather</title>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-light">
+        <h3 class="title">⚡ Track My Weather</h3>
+    </nav>
+    <div class="container">
+        <div class="container-flex">
+            <br>
+            <div class="mt-2 col-md-4">
+                <div class="input-group mb-3 mt-2">
+                    <input type="text" maxlength=25 class="form-control" placeholder="Enter City" id="text-city" aria-describedby="basic-addon1">
+                    <div class="input-group-prepend">
+                      <button class="btn btn-info" type="button" id='search-btn'>Search</button>
+                    </div>
+                    <div class="valid-feedback">Looks good!</div>
+                    <div class="invalid-feedback">
+                      Invalid: Enter Valid City.
+                    </div>
+                </div>
+            </div>
+            <div id="weatherCard">
+               
+            </div>
+        </div>
+    </div>
+    <footer class="footer ">
+        <div class="container" >
+            <p>Made By Swathi Prabhu</p>
+        </div>
+    </footer>
+    
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+</body>
+</html>
