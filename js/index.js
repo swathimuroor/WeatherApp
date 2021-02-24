@@ -1,4 +1,5 @@
-const apiKey="";
+// declare all the variables here.
+const apiKey="set your api key here";
 const apiURL="https://api.openweathermap.org/data/2.5/weather?";
 
 const searchBtn = document.querySelector('#search-btn');
