@@ -1,8 +1,10 @@
-const apiKey="218447f60a1ed42c9893483bb3df42fb";
+const apiKey="";
 const apiURL="https://api.openweathermap.org/data/2.5/weather?";
 
 const searchBtn = document.querySelector('#search-btn');
 
+// this method is to fetch the value from openweathermap 
+// this require api and city name
 const getWeather = async (place) => {
     try {
       let response = await fetch(apiURL + `q=${place}&appid=${apiKey}&units=metric`);
@@ -17,6 +19,7 @@ const getWeather = async (place) => {
     }
   };
 
+  // This method renders card view for the weather.
   const getWeatherCard = data => {
     const imageName = getImages[data.weather[0].icon];
     return `  <div class="card text-center col-md-4" >
